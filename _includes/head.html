@@ -3,7 +3,11 @@
 	<meta http-equiv="x-ua-compatible" content="ie=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<title class="pageTitle">{{ site.page_title }}</title>
+	<title class="pageTitle">
+		{% if page.title and page.title != empty -%}
+			{{ page.title }} &verbar;
+		{%- endif %} {{ site.page_title }}
+	</title>
 	<meta name="description" content="{{ site.app_description }}">
 
 	<link rel="shortcut icon" href="{{ site.app_icon | relative_url }}">
