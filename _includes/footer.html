@@ -60,4 +60,8 @@
 			<a href="{{ site.presskit_download_link }}">Press Kit</a>
 		{% endif %}
 	</div>
+
+	{% if site.goatcounter and site.goatcounter != empty %}
+	<script async data-goatcounter="{{ site.goatcounter }}" src="//gc.zgo.at/count.js"></script>
+	{% endif %}
 </footer>
